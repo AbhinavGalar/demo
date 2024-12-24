@@ -9,5 +9,5 @@
 // h1.style.borderBlockColor="black"
 
    var h1=document.getElementById("btn")
-#btn.innerHTML="show";
+btn.innerHTML="show";
 
