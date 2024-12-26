@@ -13,4 +13,4 @@ localStorage.removeItem('name')
 
 
 // localstorage 
-// 
+// local storage is stroage in browser
