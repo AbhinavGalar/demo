@@ -7,7 +7,7 @@ function signup(){
     localStorage.setItem('signupdata',JSON.stringify(data))
 }
 
-let locat_data =JSON.parse(localStorage.getItem('signupdata'))
+let local_data =JSON.parse(localStorage.getItem('signupdata'))
 
 function login(){
     let data ={
@@ -15,7 +15,8 @@ function login(){
         passwordlogin:document.getElementById('passwordlogin').value
     }
 
-    if(locat_data.username!=data.usernamelogin || locat_data.password != data.passwordlogin){
-        aler
+    if(local_data.username!=data.usernamelogin || local_data.password != data.passwordlogin){
+        alert("user not found")
+        return false;
     }
 }
