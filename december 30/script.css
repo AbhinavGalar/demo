@@ -1,0 +1,31 @@
+.box{
+    background-color: black;
+    margin: 50px;
+    padding: 50px;
+    color: blanchedalmond;
+    height: 100px;
+    width: 100px;
+}
+.box1{
+    background-color: black;
+    margin: 50px;
+    padding: 100px;
+    height: 100px;
+    width: 100px;
+    color: blanchedalmond;
+}
+.box2{
+    background-color: black;
+    margin: 50px;
+    padding: 100px;
+    height: 100px;
+    width: 100px;
+    color: blanchedalmond;
+}.box3{
+    background-color: black;
+    margin: 50px;
+    padding: 100px;
+    height: 100px;
+    width: 100px;
+    color: blanchedalmond;
+}
