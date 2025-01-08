@@ -1,4 +1,4 @@
-async function fet (params) {
+async function fet () {
     let table = document.querySelector('#displaydata')
     let res = await fetch  ("http://localhost:3000/emp")
     let data = await res.json()
@@ -16,25 +16,25 @@ async function fet (params) {
 </tr>
     
     `).join("")
-    table.innerHTML = finaldata
+    table.innerHTML = finaldata;
 }
 fet()
 
-function mydelete (id){
-    console.log(id)
-}
-// update
-async function edit (id) {
-    let res = await fetch (`http://localhost:3000/${id}`)
-    let data = await res.join()
-    let edit_frm =`
-    <input type ="text value = ${data.id}" readonly> <br>
-    <input type = "text value = ${data.name}" id="name1"><br>
-    <input type = "text value = ${data.age}" id="age1"><br>
-    <input type = "text value = ${data.contact}" id="contact1"><br>
-    <input type = "text value = ${data.city}" id="city1"><br>
 
-<input type ="submit">
+
+//========================================== update=========================
+async function edit(id) {
+    let res = await fetch (`http://localhost:3000/emp/${id}`)
+    let data = await res.json()
+    let edit_frm =`
+    <input type ="text" value = "${data.id}" readonly id="id1"> <br>
+    <input type = "text" value = "${data.name}" id="name1"><br>
+    <input type = "text" value = "${data.age}" id="age1"><br>
+    <input type = "text" value = "${data.contact}" id="contact1"><br>
+    <input type = "text" value = "${data.city}" id="city1"><br>
+
+<input type ="submit" value ="update" onclick="myupdate('${data.id}')">
+
 `
 document.querySelector('#editform').innerHTML=edit_frm    
 }
@@ -42,35 +42,20 @@ document.querySelector('#editform').innerHTML=edit_frm
 function myupdate(id){
     let update ={
         name: document.querySelector('#name1').value,
+        id: document.querySelector('#id1').value,
         age: document.querySelector('#age1').value,
         contact: document.querySelector('#contact1').value,
-       city: document.querySelector('#city1').value,
+       city: document.querySelector('#city1').value
 
     }
 
-    fetch (`http://localhost:3000/emp/${id}`,{
-        method: 'put',
+    fetch(`http://localhost:3000/emp/${id}`,{
+        method: 'PUT',
         headers:{
             'content-type': 'application/json'
         },
         body:JSON.stringify(update)
     })
-    .then(res=>alert("update..!!!)
-        
+    .then(res=>alert("update..!!!"))
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    )
 }

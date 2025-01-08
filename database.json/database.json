@@ -1,11 +1,22 @@
 {
-    "emp" :[
-        {
-            "name":"abhinav",
-            "age":"12",
-            "city":"itarsi"
-        }
-
-
-    ]
+  "emp": [
+    {
+      "name": "abhinav",
+      "age": "12",
+      "contact": "undefined",
+      "city": "hoshangabad"
+    },
+    {
+      "name": "abhinav khanan",
+      "age": "12",
+      "contact": "undefined",
+      "city": "itarsi"
+    },
+    {
+      "name": "sudhanshu",
+      "age": "12",
+      "contact": "undefined",
+      "city": "itarsi"
+    }
+  ]
 }
